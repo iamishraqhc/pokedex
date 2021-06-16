@@ -1,0 +1,8 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "es5",
+  "plugins": ["prettier-plugin-svelte"],
+  "svelteSortOrder" : "scripts-markup-styles",
+  "svelteBracketNewLine": true
+}
