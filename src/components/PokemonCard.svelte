@@ -9,3 +9,9 @@
     const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`
 </script>
 
+<article class="flex flex-col items-center max-w-sm rounded overflow-hidden shadow-lg">
+    <div class="px-6 py-4">
+        <h2 class="font-bold text-xl mb-2">{name}</h2>
+    </div>
+    <img class="w-24 h-24" src={imageUrl} alt=""/>
+</article>
