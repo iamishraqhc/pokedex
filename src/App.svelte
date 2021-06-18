@@ -11,10 +11,10 @@
 <Router {url}>
   <header class="flex flex-col sm:flex-row items-center justify-between w-full bg-red-600 px-8 py-4">
     <h1 class="text-2xl text-white uppercase">
-      <Link to="/">Svelte PokeDex</Link>
+      <Link to="/">PokeDex</Link>
     </h1>
     <p class="text-white">
-      A Svelte REST API demo using the
+      A Svelte REST API app using the
       <a href="https://pokeapi.co/" class="text-white underline">PokéAPI</a>
     </p>
   </header>
