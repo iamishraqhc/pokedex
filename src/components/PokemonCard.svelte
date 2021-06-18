@@ -1,4 +1,7 @@
 <script>
+    import {  Link, link } from 'svelte-routing'
+    import {  toTitleCase } from '../utils'
+
     export let name
     export let url
 
@@ -6,12 +9,22 @@
     const indexLocation = urlArray.length - 2
 
     const index = urlArray[indexLocation]
+
     const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`
 </script>
 
-<article class="flex flex-col items-center max-w-sm rounded overflow-hidden shadow-lg">
-    <div class="px-6 py-4">
-        <h2 class="font-bold text-xl mb-2">{name}</h2>
-    </div>
-    <img class="w-24 h-24" src={imageUrl} alt=""/>
+<article class="flex flex-col items-center max-w-sm birder-red-600 border-t-8 border-red-500 rounded overflow-hidden shadow-lg">
+    <header class="px-6 py-4">
+        <h2 class="font-bold text-xl mb-2">
+            <Link href="/{index}">{toTitleCase(name, '-')}</Link>
+        </h2>
+    </header>
+    <img class="w-24 h-24" src={imageUrl} alt=""/> 
+    <footer class="flex justify-end w-full">
+        <a href="/{index}" class="p-2 text-red-600 hover:text-red-700 cursor-pointer" use:link>
+            <svg fill="none" viewBox="0 0 16 16" class="w-6 h-6 fill-current">
+                <path d="M8 9.986H3a1 1 0 01-1-1v-2a1 1 0 011-1h5v-2a1 1 0 011.7-.7l4 4a1 1 0 010 1.4l-4 4a1 1 0 01-1.7-.7v-2z"/>
+            </svg>
+        </a>
+    </footer>
 </article>
